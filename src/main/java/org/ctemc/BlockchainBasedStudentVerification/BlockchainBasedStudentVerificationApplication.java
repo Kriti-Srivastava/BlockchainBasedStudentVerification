@@ -15,6 +15,7 @@ import org.apache.commons.codec.digest.DigestUtils;
 public class BlockchainBasedStudentVerificationApplication {
 
 	public static void main(String[] args) throws IOException {
+		/*
 		SpringApplication.run(BlockchainBasedStudentVerificationApplication.class, args);
 		System.out.println("hello blockchain");
 		Scanner consoleReader = new Scanner(System.in);
@@ -42,15 +43,23 @@ public class BlockchainBasedStudentVerificationApplication {
 		System.out.println("Please enter the document type:");
 		String artifact = consoleReader.nextLine();
 		artifact = (artifact != null) ? artifact.toUpperCase().trim() : "-";
+*/
+		String gradYear = "2025";
+		String country = "US";
+		String state = "NJ";
+		String school = "HTHS";
+		String ID = "07751";
+		String artifact = "REPORTCARD";
 
 		String uniqueStudentIdentifier = gradYear + "-" + country + "-" + state  + "-" + school + "-" + ID + "-" + artifact;
 		System.out.println(uniqueStudentIdentifier);
 
 		//artifact hash
 
-		System.out.println("\nEnter the document's location: ");
-		String  artifactLocation = consoleReader.nextLine();
-		artifactLocation = (artifactLocation != null) ? artifactLocation.trim() : "-";
+//		System.out.println("\nEnter the document's location: ");
+//		String  artifactLocation = consoleReader.nextLine();
+//		artifactLocation = (artifactLocation != null) ? artifactLocation.trim() : "-";
+		String artifactLocation = "C:\\home\\git-repose\\BlockchainBasedStudentVerification\\src\\test\\resources\\ReportCard.txt";
 		System.out.println("Artifact location is: " + artifactLocation);
 
 		Path filePath = Path.of(artifactLocation);
@@ -59,6 +68,8 @@ public class BlockchainBasedStudentVerificationApplication {
 
 		String artifactHash = DigestUtils.sha256Hex(artifactContent);
 		System.out.println("The artifactHash is: " + artifactHash);
+
+
 	}
 
 }

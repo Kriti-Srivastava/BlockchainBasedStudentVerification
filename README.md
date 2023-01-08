@@ -1,7 +1,7 @@
 # BlockchainBasedStudentVerification
 Using a blockchain based web-system to optimize the efficiency and validity of the college application process.
 
-#How to deploy smart contract in Ganache
+## How to deploy smart contract in Ganache
 
 Prerequisites: 
 1. Install node.js as this is a prerequisite to install the truffle suite (this includes Ganache and other truffle tools)
@@ -24,5 +24,17 @@ Installing Truffle and Ganache:
 Setting up solidity structure, compilation, and deployment 
 2. Create and navigate to blockchain directory
 2. In the console run following commands
-   3. truffle init
+   3. truffle init this will create the project structure for the blockchain development e.g. folders like contracts, 
+      migrations and test
+      4. contract will store all the smart contract files 
+      5. migration will store all deployment scripts 
+      6. tests will create and store the test files
+   7. update truffle-config.js to update local blockchain (ganache) address and port
+   8. add migration scripts under the migration folder
+
+
+to do + questions:
+- understand abi and binary of smart contract
+- 
+   
    

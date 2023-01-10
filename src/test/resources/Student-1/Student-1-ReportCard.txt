@@ -1,0 +1,8 @@
+Name: Student 1
+
+Math: 87
+Social Studies:95
+English: 83
+IED:98
+CIM:97
+Language:90

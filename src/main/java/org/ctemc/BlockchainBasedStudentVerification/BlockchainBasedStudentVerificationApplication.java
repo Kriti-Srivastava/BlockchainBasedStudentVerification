@@ -69,7 +69,7 @@ public class BlockchainBasedStudentVerificationApplication {
 
 		Path filePath = Path.of(artifactLocation);
 		String artifactContent = Files.readString(filePath);
-		System.out.println("File contents are: " + artifactContent);
+//		System.out.println("File contents are: " + artifactContent);
 
 		String artifactHash = DigestUtils.sha256Hex(artifactContent);
 		System.out.println("The artifactHash is: " + artifactHash);
@@ -80,25 +80,23 @@ public class BlockchainBasedStudentVerificationApplication {
 
 		if (userType.equalsIgnoreCase("SCHOOL")){
 			blockchainService.addArtifact(uniqueStudentIdentifier, artifactHash);
+			System.out.println("*************************************************");
 			System.out.println("Document has been added to the blockchain network");
+			System.out.println("*************************************************");
 		}
 		else{
 			String returnedHash = blockchainService.getArtifact(uniqueStudentIdentifier);
 			if(returnedHash.equalsIgnoreCase(artifactHash)){
-				System.out.println("************************************");
+				System.out.println("****************************************************");
 				System.out.println("Blockchain validation SUCCESSFUL. Document is VALID.");
-				System.out.println("************************************");
+				System.out.println("****************************************************");
 			}
 			else{
-				System.out.println("************************************");
+				System.out.println("**************************************************");
 				System.out.println("Blockchain validation FAILED. Document is INVALID.");
-				System.out.println("************************************");
+				System.out.println("**************************************************");
 			}
 		}
-
-		//validator
-
-
 	}
 
 }

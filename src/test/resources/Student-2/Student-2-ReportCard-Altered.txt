@@ -1,0 +1,8 @@
+Name: Student 2
+
+Math: 100
+Social Studies:75
+English: 99
+IED:100
+CIM:100
+Language:99

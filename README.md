@@ -22,15 +22,24 @@ Installing Truffle and Ganache:
 
 
 Setting up solidity structure, compilation, and deployment 
-2. Create and navigate to blockchain directory
+2. Create and navigate to blockchain directory (C:\home\git-repose\BlockchainBasedStudentVerification\src\main\blockchain)
 2. In the console run following commands
-   3. truffle init this will create the project structure for the blockchain development e.g. folders like contracts, 
-      migrations and test
+   3. truffle init -- this will create the project structure for the blockchain development e.g. folders like contracts, 
+      migrations and test - only ONCE 
       4. contract will store all the smart contract files 
       5. migration will store all deployment scripts 
       6. tests will create and store the test files
    7. update truffle-config.js to update local blockchain (ganache) address and port
    8. add migration scripts under the migration folder
+   9. truffle migrate -- deploy the contract to the blockchain 
+       - run from blockchain (C:\home\git-repose\BlockchainBasedStudentVerification\src\main\blockchain) 
+
+
+C:\home\git-repos\web3j-3.3.1\bin>web3j truffle generate 
+C:\home\git-repos\college-blockchain\src\main\blockchain\build\contracts\ArtifactValidator.json -o 
+C:\home\git-repos\college-blockchain\src\main\java -p org.ctemc.collegeblockchain.contract
+1. use Web3j utility to generate contract specific java code ^ this is the command
+2. 
 
 
 to do + questions:

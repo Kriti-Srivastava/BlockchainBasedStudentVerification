@@ -1,8 +1,0 @@
-math: 100
-
-english: 0
-
-history: 100
-
-social studies: 50
-
